@@ -10,8 +10,8 @@ int main() {
     int resultOne = a + b *c;
     int resultTwo = (a + b) * c;
 
-    cout << "The Answer of 10 + 5 * 2"  << resultOne << endl;
-    cout << "The Answer of (10 + 5) * 2 "<< resultTwo << endl;
+    cout << "The Answer of 10 + 5 * 2 is : "  << resultOne << endl;
+    cout << "The Answer of (10 + 5) * 2 is : "<< resultTwo << endl;
 
     return 0;
 }

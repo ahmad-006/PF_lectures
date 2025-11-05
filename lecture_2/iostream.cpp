@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int     age; //458459784987
+    int     age; 
     float   salary; 
     double  distance;
     char    grade;
