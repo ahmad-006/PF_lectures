@@ -8,3 +8,16 @@ int main() {
     cout << "Enter 3 Numbers: ";
     cin >> a >> b>>c;
  
+
+    // Arithmetic operations
+
+    //addition
+    cout << "Addition (a + b): " << a + b << endl;
+    //substraction
+    cout << "Subtraction (a - b): " << a - b << endl;
+    //multiplication
+    cout << "Multiplication (a * b): " << a * b << endl;
+    // Division 
+    cout << "Division (a / b): " << a / b << endl;
+        // Modulus with int 
+    cout << "Modulus (a % b): " << int(a) % int(b) << endl;
