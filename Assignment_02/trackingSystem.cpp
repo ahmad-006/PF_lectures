@@ -56,3 +56,64 @@ customer_type:
         goto customer_type;
     } 
 
+    input_order:
+
+        cout << "Please Enter Order Id: ";
+        cin >> orderId;
+
+        cout << "Please enter Order Quantity:";
+        cin >> orderQty;
+
+
+        //validate orderId and quantity
+        if(orderId != firstProductId && orderId != thirdProductId && orderId != secondProductId ){
+            cout << "Order Id wrong please Enter correct Order Id" << endl;
+            goto input_order;
+        };
+
+        if(orderId == firstProductId && firstProductQuantity < orderQty){
+            cout << "Out of Stock...... Product " << firstProductId << " only has " << firstProductQuantity << " items in stock" << endl;
+            goto input_order;
+        }else if(orderId == secondProductId && secondProductQuantity < orderQty){
+            cout << "Out of Stock...... Product " << secondProductId << " only has " << secondProductQuantity << " items in stock" << endl;
+            goto input_order;
+        }
+        else if (orderId == thirdProductId && thirdProductQuantity < orderQty)
+        {
+            cout << "Out of Stock...... Product " << thirdProductId << " only has " << thirdProductQuantity << " items in stock" << endl;
+            goto input_order;
+        }
+
+        //? calculating order 
+        //subtotal 
+        if(orderId == firstProductId)
+            subtotal = firstProductPrice * orderQty ;
+        else if(orderId == secondProductId)
+            subtotal = secondProductPrice * orderQty;
+        else if(orderId == thirdProductId)
+            subtotal = thirdProductPrice * orderQty;
+
+
+        // discount for Prime customers
+        if(CustomerType == 'P' || CustomerType == 'p'){
+            discount = subtotal *  0.10;
+        } 
+        
+        
+        //fees if order less than Rs 5000
+        if(subtotal < 5000){
+            fee = 200;
+        }
+        
+        //getting total
+        total = subtotal - discount + fee;
+  
+
+        //confirm order
+        cout << "Confirm Order? (Y to Confirm / N to change): ";
+        cin >> confirm;
+
+        if(confirm == 'N' || confirm == 'n'){
+            cout << "Order Not Confirmed Going to Start.....!" << endl;
+            goto customer_type;
+        }
