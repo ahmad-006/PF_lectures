@@ -21,3 +21,14 @@ int main() {
     cout << "Division (a / b): " << a / b << endl;
         // Modulus with int 
     cout << "Modulus (a % b): " << int(a) % int(b) << endl;
+
+
+    //operator precedence
+
+    // Arithmetic expression without parentheses
+    cout << "Expression a + b * c: " << a + b * c << endl;
+    //Arithmetic expression with paranthesis
+    cout << "Expression (a + b) * c: " << (a + b) * c << endl;
+
+    return 0;
+}
