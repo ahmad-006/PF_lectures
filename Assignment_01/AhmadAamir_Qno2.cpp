@@ -24,3 +24,15 @@ int main() {
     // Postfix decrement
     cout << "Postfix decrement (x--): " << x-- << endl; // current x used, then decremented
     cout << "After postfix decrement, x = " << x << endl;
+
+    // Relational operators
+    if (x > 10) {
+        cout << "\nx is greater than 10." << endl;
+    } else if (x == 10) {
+        cout << "\nx is equal to 10." << endl;
+    } else {
+        cout << "\nx is less than 10." << endl;
+    }
+
+    return 0;
+}
