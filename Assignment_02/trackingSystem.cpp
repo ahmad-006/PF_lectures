@@ -117,3 +117,16 @@ customer_type:
             cout << "Order Not Confirmed Going to Start.....!" << endl;
             goto customer_type;
         }
+
+
+        cout << "\n--------- ORDER SUMMARY ---------" << endl;
+        cout << "Subtotal: Rs" << subtotal << endl;
+        cout << "Discount: -Rs" << discount << endl;
+        cout << "Fee:      +Rs" << fee << endl;
+        cout << "Total:    Rs" << total << endl;
+        cout << "---------------------------------" << endl;
+
+
+
+        return 0;
+}
